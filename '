@@ -1,0 +1,171 @@
+<html>
+<head>
+<style>
+#container:before{
+clear:both;
+content:"";
+display:table;
+}
+#container:after{
+clear:both;
+content:"";
+display:table;
+}
+[role="banner"]:before{
+content:"";
+display:table;
+}
+[role="banner"]:after{
+clear:both;
+content:"";
+display:table;
+
+}
+[role="banner"] [role="navigation"] li{
+text-align:center;
+list-style:disc outside none;
+margin:0;
+border:0;
+float:left;
+text-align:left;
+font-size:12px;
+text-transform:uppercase;
+font-weight:700;
+line-height:16px;
+border:solid;
+border-width:1px;
+border-color:red;
+}
+[role="banner"] [role="navigation"] a {
+display:block;
+padding:20px 10px;
+color:rgb(255,255,255);
+text-decoration:none;
+}
+.icon-search:before {
+    content:"0"; 
+}
+</style>
+</head>
+
+<body style="-webkit-font-smoothing:antialiased;line-height:1.6;font-family:Palatino,'Palatino Linotype','Book Antiqua','Hoefler Text',Georgia,'Lucida Bright',Cambria,Times,'times New Roman',serif;">
+
+<div role="banner" id="top" style="background-color:rgb(12,75,51);display:block;">
+  <div class="container" style="display:block;line-height:28px;">
+    <a style="cursor:auto;display:block;float:left;text-indent:100%;font-family:Roboto,Corbel,Avenir,'Lucida Grande','Lucida Sans',sans-serif; margin:0px 10px 10px 10px;color:rgb(255,255,255);height:36px;line-height:64px;font-weight:bold;text-indent:100%;text-decoration:none;width:104px;height:36px;background:rgba(0,0,0,0) url() no-repeat scroll 50% 50% auto padding-box border-box;background-position:50% 50%;font-size:40px;" class="logo" href="https://www.djangoproject.com/">django</a>
+    <p class="meta" style="display:none;float:left;">The web framework for perfectionists with deadlines.</p>
+    <div class="menu-button" style="display:none;float:right;cursor:pointer;text-align:center;"><i class="icon icon-reorder" style="display:inline-block;"></i><span>Menu</span></div>
+    <div role="navigation" class="nav-menu-on" style="min-width:768px;display:block;float:right;transition-property:none;">
+      <ul style="list-style-type:disc;display:block;padding:0;margin:0;">
+        <li>
+          <a style="color:rgb(255,255,255);font-weight:blod;text-decoration:none;display:block; padding:20px 10px 20px 10px;" href="https://www.djangoproject.com/start/overview/">Overview</a>
+        </li>
+        <li>
+          <a href="https://www.djangoproject.com/download/">Download</a>
+        </li>
+        <li class="active">
+          <a href="https://docs.djangoproject.com/">Documentation</a>
+        </li>
+        <li>
+          <a href="https://www.djangoproject.com/weblog/">News</a>
+        </li>
+        <li>
+          <a href="https://www.djangoproject.com/community/">Community</a>
+        </li>
+        <li>
+          <a href="https://github.com/django/django" target="_blank" rel="noopener">Code</a>
+        </li>
+        <li>
+          <a href="https://code.djangoproject.com/">Issues</a>
+        </li>
+        <li>
+          <a href="https://www.djangoproject.com/foundation/">About</a>
+        </li>
+        <li>
+          <a href="https://www.djangoproject.com/fundraising/">♥ Donate</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="copy-banner" style="display:block;padding:1px 0px;background-color:rgb(68,183,139);">
+      <div class="container 
+container--flex container--flex--wrap--mobile
+" style="display:flex;margin:0px 20px;border-color:red;border-style:solid; padding: 0 4.16667%;flex-wrap:wrap;justify-content:space-between;">
+        
+<h1 style="display:block;padding:1px 0px 6px;color:rgb(201,240,221);"><a style="color:rgb(201,240,221);display:inline;text-decoration:none;" href="https://docs.djangoproject.com/zh-hans/3.0/">文档</a></h1>
+
+
+<form action="https://docs.djangoproject.com/zh-hans/3.0/search/" class="search form-input" role="search" style="display:block;flex:0 0 40%;margin:10px 0px;position:relative;border:1px solid red;">
+  <label class="visuallyhidden" for="id_q" style="display:block;position:absolute;margin:-1px;padding:0px;width:1px;clip:rect(0px,0px,0px,0px);">Search:</label>
+    <input type="search" name="q" placeholder="搜索 3.0 文档" id="id_q" style="height:30px;width:80%;-webkit-appearance:none;-webkit-rtl-ordering:logical;-webkit-user-select:text;border:1px solid rgb(207,227,220);border-radius:4px;cursor:auto;display:block;vertical-align:middle;padding:20px 18% 8px 10px;margin:20px 0px;border:1px solid red;">
+
+    <button type="submit" style="display:block;align-items:flex-start normal;right:2%;top:20%;position:absolute;border:1px solid red;">
+      <i class="icon icon-search"style="color:rgb(68,183,139);display:inline-block;height:20px;font:normal normal normal normal 40px/40px FontAwesome;text-rendering:auto;width:30px;"></i>
+      <span class="visuallyhidden">搜索</span>
+    </button>
+</form>
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+<div id="container" style="color:#FFFFFF;background-color:rgb(68,183,139);margin:0px 0px 0px 0px;padding:0px 0px 1px 0px;border:0 0 0 0;font-family:'Roboto',Corbel,Avenir,'Lucida Grande','Lucida Sans',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;">
+
+    <div style="display:block;float:left;width:23%;padding:0px 3% 999px 0px;margin-bottom:-999px"><h2>Learn More</h2>
+        <ul style="display:block;list-style-type:none;list-style-position:outside;padding-inline-start:0px">
+        <li>About Django</li>
+        <li>Getting Started with Django</li>
+        <li>Team organization</li>
+        <li>Django Software Foundation</li>
+        <li>Code of Conduct</li>
+        <li>Diversity Statement</li>
+        </ul>
+    </div>
+    <div style="float:left;width:23%;padding:0px 3% 999px 0px;margin-bottom:-999px;"><h2>加入群聊</h2>
+        <ul style="display:block;list-style-type:none;list-style-position:outside;padding-inline-start:0px">
+        <li>微信群</li>
+        <li>提建议</li>
+        </ul>
+    </div>
+    <div style="float:left;width:23%;padding:0px 0px 999px 0px;margin-bottom:-999px;margin-right:0px;"><h2>关注我们</h2>
+        <ul style="display:block;list-style-type:none;list-style-position:outside;padding-inline-start:0px">
+        <li>GitHub</li>
+        <li>Twitter</li>
+        <li>News RSS</li>
+        <li>Django Users Mailing List</li>
+        </ul>
+    </div>
+    <div style="float:left;width:23%;font-size:18px;width=23%;margin-right:0px;margin-bottom:-999px;padding:0px 0px 999px 0px;"><h2>支持我们</h2>
+        <ul style="display:block;list-style-type:none;list-style-position:outside;padding-inline-start:0px">
+        <li>About Django</li>
+        <li>Getting Started with Django</li>
+        <li>Team organization</li>
+        <li>Django Software Foundation</li>
+        <li>Code of Conduct</li>
+        <li>Diversity Statement</li>
+        </ul>
+    </div>
+</div>
+
+<div id="footer-logo" style="display:block;color:rgb(43,140,103);background-color:rgb(12,75,51);background-clip:border-box;background-attachment:scroll;background-origin:padding-box;margin-top:0px;padding:10px 0px 30px 0px;text-align:center;font-size:9;">
+<a href="" style="">Django</a>
+<ul>
+    <li>Hosting by <a href="">Rackspace</a></li>
+    <li>Design by Threespot & </li>
+</ul>
+<p> © 2005-2020 Django Software Foundation and individual contributors. Django is a registered trademark of the Django Software Foundataion.</p>
+</div>
+
+</body>
+</html>

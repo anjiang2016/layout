@@ -1,0 +1,203 @@
+<html>
+<head>
+<style>
+[role="contentinfo"]:before{
+content="";
+display:table;
+}
+[role="contentinfo"]:after{
+clear:both;
+content:"";
+display:table;
+}
+#container:before{
+clear:both;
+content:"";
+display:table;
+}
+#container:after{
+clear:both;
+content:"";
+display:table;
+}
+[role="banner"]:before{
+content:"";
+display:table;
+}
+[role="banner"]:after{
+clear:both;
+content:"";
+display:table;
+
+}
+[role="banner"] [role="navigation"] li{
+text-align:center;
+list-style:disc outside none;
+margin:0;
+border:0;
+float:left;
+text-align:left;
+font-size:12px;
+text-transform:uppercase;
+font-weight:700;
+line-height:16px;
+border:solid;
+border-width:0px;
+border-color:red;
+}
+[role="banner"] [role="navigation"] a {
+display:block;
+padding:20px 10px;
+color:rgb(255,255,255);
+text-decoration:none;
+}
+.icon-search:before {
+    content:"搜"; 
+    display:inline;
+    height:auto;
+    width:auto;
+}
+</style>
+</head>
+
+<body style="background-color:rgb(248,248,248);display:block;margin:0px;min-width:768px;-webkit-font-smoothing:antialiased;line-height:1.6;font-family:Palatino,'Palatino Linotype','Book Antiqua','Hoefler Text',Georgia,'Lucida Bright',Cambria,Times,'times New Roman',serif;">
+
+<div role="banner" id="top" style="background-color:rgb(12,75,51);display:block;">
+  <div class="container" style="display:block;line-height:28px;border:0px solid red;">
+    <a style="border:0px solid red;cursor:auto;display:block;float:left;text-indent:100%;font-family:Roboto,Corbel,Avenir,'Lucida Grande','Lucida Sans',sans-serif; margin:-5px 10px 10px 10px;color:rgb(255,255,255);height:36px;line-height:64px;font-weight:bold;text-indent:100%;text-decoration:none;width:20px;height:36px;background:rgba(0,0,0,0) url() no-repeat scroll 50% 50% auto padding-box border-box;background-position:50% 50%;font-size:40px;" class="logo" href="https://www.djangoproject.com/">django</a>
+    <p class="meta" style="display:none;float:left;">The web framework for perfectionists with deadlines.</p>
+    <div class="menu-button" style="display:none;float:right;cursor:pointer;text-align:center;"><i class="icon icon-reorder" style="display:inline-block;"></i><span>Menu</span></div>
+    <div role="navigation" class="nav-menu-on" style="min-width:768px;display:block;float:right;transition-property:none;">
+      <ul style="list-style-type:disc;display:block;padding:0;margin:0;">
+        <li>
+          <a style="color:rgb(255,255,255);font-weight:blod;text-decoration:none;display:block; padding:20px 10px 20px 10px;" href="https://www.djangoproject.com/start/overview/">Overview</a>
+        </li>
+        <li>
+          <a href="https://www.djangoproject.com/download/">Download</a>
+        </li>
+        <li class="active">
+          <a href="https://docs.djangoproject.com/">Documentation</a>
+        </li>
+        <li>
+          <a href="https://www.djangoproject.com/weblog/">News</a>
+        </li>
+        <li>
+          <a href="https://www.djangoproject.com/community/">Community</a>
+        </li>
+        <li>
+          <a href="https://github.com/django/django" target="_blank" rel="noopener">Code</a>
+        </li>
+        <li>
+          <a href="https://code.djangoproject.com/">Issues</a>
+        </li>
+        <li>
+          <a href="https://www.djangoproject.com/foundation/">About</a>
+        </li>
+        <li>
+          <a href="https://www.djangoproject.com/fundraising/">♥ Donate</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="copy-banner" style="display:block;padding:1px 0px;background-color:rgb(68,183,139);">
+      <div class="container 
+container--flex container--flex--wrap--mobile
+" style="display:flex;margin:0px 20px;border:0px none red; padding: 0 4.16667%;flex-wrap:wrap;justify-content:space-between;">
+        
+<h1 style="display:block;padding:1px 0px 6px;color:rgb(201,240,221);"><a style="color:rgb(201,240,221);display:inline;text-decoration:none;" href="https://docs.djangoproject.com/zh-hans/3.0/">文档</a></h1>
+
+
+<form action="https://docs.djangoproject.com/zh-hans/3.0/search/" class="search form-input" role="search" style="display:block;flex:0 0 40%;margin:10px 0px;position:relative;border:0px solid red;">
+  <label class="visuallyhidden" for="id_q" style="display:block;position:absolute;margin:-1px;padding:0px;width:1px;clip:rect(0px,0px,0px,0px);height:1px;margin:-1px;padding:0;width:1px;border:0;overflow:hidden;">Search:</label>
+    <input type="search" name="q" placeholder="搜索 3.0 文档" id="id_q" style="height:30px;width:80%;-webkit-appearance:none;-webkit-rtl-ordering:logical;-webkit-user-select:text;border:0px solid rgb(207,227,220);border-radius:4px;cursor:auto;display:block;vertical-align:middle;padding:6px 18% 8px 10px;margin:10px 0px;border:0px solid red;font-size:16px;box-sizing:content-box;">
+
+    <button type="submit" style="display:block;align-items:flex-start normal;background-clip:border-box;right:1%;top:19%;position:absolute;padding:0px;margin:0px;border:0px solid red;color:rgb(68,183,139);cursor:pointer;-webkit-appearance:none;background-color:rgba(0,0,0,0);width:40px;height:40px;font-size:16px;">
+      <i class="icon icon-search"style="color:rgb(68,183,139);display:inline-block;height:20px;font:normal normal normal normal 20px/20px FontAwesome;text-rendering:auto;width:auto;"></i>
+      <span class="visuallyhidden" style="width:1px;position:absolute;padding:0;overflow:hidden;height:1px;margin:-1px;clip:rect(0px,0px,0px,0px);">搜索</span>
+    </button>
+</form>
+
+
+      </div>
+    </div>
+
+<div id="billboard" style="color:rgb(12,60,38);display:block;"></div>
+
+<div style="display:block;border:0px solid red;color:rgb(12,60,38);padding:0 4.16667%;margin:0px; box-shadow:rgb(255,255,255) -1200px 0px 0px 0px;min-height:800px;min-width=768px;">
+   <div style="background-color:rgb(255,255,255);display:block;float:left;margin:0px;min-height:800px;padding:0px 10px 0px 4%;width:62%;">
+   <h1>写点代码进来</h1>
+       <div style="margin:0px;max-width:1400px;">
+          <div style="padding:5px 20px;background-color:rgb(201,240,221);border-radius:4px 4px 0px 0px;color:rgb(12,75,51);">这里是代码路径 </div>
+          <div style="margin:0px 0px 25px;overflow:auto;background-color:rgb(248,248,248);border-radius:0px 0px 4px 4px;" >
+               <pre>
+ from django.contrib import admin;
+ from django.contrib import admin;
+ from django.contrib import admin;
+ from django.contrib import admin;
+ from django.contrib import admin;
+ from django.contrib import admin;
+               </pre> 
+         </div> 
+      </div>
+   </div>
+   <div style="display:block;float:right;width:29%;padding:0px 0px 40px 0px;margin:20px 0;margin-left:3%;border:0px solid red;box-sizing:border-box;">
+      <div style="clear:both;display:block;height:48px"><h2 style="font-size:20px;display:block;height:32px;padding-bottom:15px;margin-top:20px;margin-block-start:20px;">Support Django!</h2></div>
+   </div>
+</div>
+
+
+
+
+
+<div role="contentinfo">
+<div id="container" style="color:#FFFFFF;background-color:rgb(68,183,139);margin:0px 0px 0px 0px;padding:0px 0px 1px 0px;border:0 0 0 0;font-family:'Roboto',Corbel,Avenir,'Lucida Grande','Lucida Sans',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;">
+
+    <div style="display:block;float:left;width:23%;padding:0px 3% 999px 0px;margin-bottom:-999px"><h2>Learn More</h2>
+        <ul style="display:block;list-style-type:none;list-style-position:outside;padding-inline-start:0px">
+        <li>About Django</li>
+        <li>Getting Started with Django</li>
+        <li>Team organization</li>
+        <li>Django Software Foundation</li>
+        <li>Code of Conduct</li>
+        <li>Diversity Statement</li>
+        </ul>
+    </div>
+    <div style="float:left;width:23%;padding:0px 3% 999px 0px;margin-bottom:-999px;"><h2>加入群聊</h2>
+        <ul style="display:block;list-style-type:none;list-style-position:outside;padding-inline-start:0px">
+        <li>微信群</li>
+        <li>提建议</li>
+        </ul>
+    </div>
+    <div style="float:left;width:23%;padding:0px 0px 999px 0px;margin-bottom:-999px;margin-right:0px;"><h2>关注我们</h2>
+        <ul style="display:block;list-style-type:none;list-style-position:outside;padding-inline-start:0px">
+        <li>GitHub</li>
+        <li>Twitter</li>
+        <li>News RSS</li>
+        <li>Django Users Mailing List</li>
+        </ul>
+    </div>
+    <div style="float:left;width:23%;font-size:18px;width=23%;margin-right:0px;margin-bottom:-999px;padding:0px 0px 999px 0px;"><h2>支持我们</h2>
+        <ul style="display:block;list-style-type:none;list-style-position:outside;padding-inline-start:0px">
+        <li>About Django</li>
+        <li>Getting Started with Django</li>
+        <li>Team organization</li>
+        <li>Django Software Foundation</li>
+        <li>Code of Conduct</li>
+        <li>Diversity Statement</li>
+        </ul>
+    </div>
+</div>
+
+<div id="footer-logo" style="display:block;color:rgb(43,140,103);background-color:rgb(12,75,51);background-clip:border-box;background-attachment:scroll;background-origin:padding-box;margin-top:0px;padding:10px 0px 30px 0px;text-align:center;font-size:9;">
+<a href="" style="border:0px solid red;float:left;margin:0px;text-decoration:none;width:109px;font-size:32px;color:rgb(248,248,248);">Django</a>
+<ul style="list-style:none outside none;margin:0px;padding:0px;font-size:14px;">
+    <li style="border:0px solid red;clear:none;display:block;float:left;height:51px;padding:0 3% 0 0;width:30%;text-align:center;"><p style="heigth:51px">Hosting by <a  style="clear:both;color:rgb(241,255,247);cursor:auto;display:inline;margin:10px 10px 10px 10px;height:51px;text-decoration:none;width:94px;" href="">Rackspace</a></p></li>
+    <li style="border:0px solid red; clear:none;float:left;height:50px;padding:0 3% 0 0;width:30%;"><p style="height:50px">Designed by <a style="clear:both;color:rgb(241,255,247);text-decoration:none;"href="">Threespot</a></p> </li>
+</ul>
+<p style="clear:both;padding:30px 0px 0px;max-width:80%;margin:0px;"> © 2005-2020 Django Software Foundation and individual contributors. Django is a registered trademark of the Django Software Foundataion.</p>
+</div>
+</div>
+</body>
+</html>
