@@ -114,11 +114,11 @@ border-right:5px solid rgb(0,102,255);
             <div style="display:flex">
               <ul style="display:flex;flex:0 0 auto;border:0px solid red;">
                 <li>老师明明可以靠颜值</li>
-                <li>限时福利</li>
-                <li>会员中心</li>
-                <li>我的学习</li>
-                <li>消息</li>
-                <li>购物车</li>
+                <li><a href="{% url 'cvclass:muofangwangyi' %}">限时福利</a></li>
+                <li><a href="{% url 'cvclass:muofangwangyi_vip' %}"> 会员中心</a></li>
+                <li><a href="{% url 'cvclass:muofangwangyi_learn' %}">我的学习</a></li>
+                <li><a href="{% url 'cvclass:muofangwangyi_message' %}">消息</a></li>
+                <li><a href="{% url 'cvclass:muofangwangyi_buy' %}">购物车</a></li>
                 <li>登录/注册</li>
               </ul>
               <div style="flex:1 1 0%;padding:12px;">
