@@ -1,0 +1,64 @@
+{% extends "cvclass/lay_out/muofangwangyi_dtl/base_wy.html" %}
+
+{% block content %}
+        {% if not request.user.is_authenticated %}
+           <div id="content-block">
+               <div id="content-block-title"><p>请登录</p></div>
+           </div>
+           <div id="content-block">
+               <form height:"300px" action="{% url 'cvclass:muofangwangyi_login' %}" method="post">
+                   {% csrf_token %}
+                   <input type="text" name="username" placeholder="请输入用户名" />
+                   <input type="password" name="password" placeholder=" 请输入密码" />
+                   <input type = "submit" value = "登录">
+               </form>
+           </div>
+        {% else %}
+           <div id="content-block">
+               <div id="content-block-title"><p>{{ request.user.username }}同学来了，下午好</p></div>
+           </div>
+           <div id="content-block">
+                 <ul style="display:flex;">
+                     <li>按加入时间</li>
+                     <li>按加入顺序</li>
+                     <li>全部</li>
+                     <li>付费</li>
+                     <li>即将过期</li>
+                     <li>{{msg}} </li>
+                 </ul>
+           </div>
+         {% endif %}
+           <div id="content-block">
+                <table>
+                <ul>
+                {% for model in models %}
+                    <tr>
+                        {% if model.admin_url %}
+                            <th><a href="{{ model.admin_url }}">{{model.name}}</a></th>
+                        {% elif model.buy_url %}
+                            <th><a href="{{ model.buy_url }}">{{model.name}}</a></th>
+                        {% else %}
+                            <th>{{ model.name }}</th> 
+                        {% endif %}
+                        <td>过期时间</td>
+                        <td>学习进度</td>
+                        {% if model.add_url %}
+                            <td><a href={{ model.add_url }}>添加</a></td>
+                        {% else %}
+                            <td>&nbsp;</td>
+                        {% endif %}
+      
+                        {% if model.admin_url %}
+                                <td><a href="{{ model.admin_url }}">查看</a></td>
+                        {% elif model.buy_url %}
+                            <td><a href="{{ model.buy_url }}">购买</a></td>
+                        {% else %}
+                            <td>&nbsp</td>
+                        {% endif %}
+
+                    </tr>
+                {% endfor %}
+                </ul>
+                </table>
+           </div>
+{% endblock content %}

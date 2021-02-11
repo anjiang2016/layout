@@ -1,14 +1,21 @@
 {% extends "cvclass/lay_out/muofangwangyi_dtl/base_wy.html" %}
+
 {% block content %}
+        {% if not request.user.is_authenticated %}
            <div id="content-block">
-               <div id="content-block-title"><p>{{ request.user.username }}同学来了，下午好</p></div>
+               <div id="content-block-title"><p>请注册</p></div>
            </div>
            <div id="content-block">
-                 <ul style="display:flex;">
-                     <li>课程</li>
-                     <li>收藏夹</li>
-                     <li>点赞</li>
-                 </ul>
+               <form height:"300px" action="{% url 'cvclass:muofangwangyi_register' %}" method="post">
+                   {% csrf_token %}
+                   <input type="text" name="username" placeholder="请输入用户名" />
+                   <input type="password" name="password" placeholder=" 请输入密码" />
+                   <input type = "submit" value = "注册">
+               </form>
+           </div>
+        {% else %}
+           <div id="content-block">
+               <div id="content-block-title"><p>{{ request.user.username }}同学来了，下午好</p></div>
            </div>
            <div id="content-block">
                  <ul style="display:flex;">
@@ -19,6 +26,7 @@
                      <li>即将过期</li>
                  </ul>
            </div>
+         {% endif %}
            <div id="content-block">
                 <ul>
                     <li>入门基本图像处理   过期时间  学习进度</li>

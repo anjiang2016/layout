@@ -1,37 +1,15 @@
 {% extends "cvclass/lay_out/muofangwangyi_dtl/base_wy.html" %}
 {% block content %}
-
-
            <div id="content-block">
-               <div id="content-block-title"><p>vip会员专区</p></div>
-           </div>
-           <div id="content-block">
-                 <ul style="display:flex;">
-                     <li>49元[1个月]</li>
-                     <li>105元[3个月]</li>
-                     <li>365元[12个月]</li>
-                 </ul>
-           </div>
-           <div id="content-block">
-               <div id="content-block-title"><p>会员权益说明</p></div>
-           </div>
-           <div id="content-block">
-                 <ul >
-                     <li>会员期内，会员有专属免费课程</li>
-                     <li>享受课程专属折扣</li>
-                     <li>新课尝鲜，会员免费学习当月新课</li>
-                     <li>会员标识，头像上带特殊标识，彰显您的尊贵</li>
-                     <li>贴心服务,明明老师的对话机器人将全天候为您提供优质答疑服务</li>
-                 </ul>
-           </div>
-           <div id="content-block">
-               <div id="content-block-title"><p>会员精选推荐<p></div>
+               <div id="content-block-title"><p>系统化学习计算机视觉<p></div>
                <div style="">
+                {% if class_list %}
+                  {% for class in class_list %}
                    <div  id="video-block" >
-                       <div id="video-title">[一]课程导论</div>
+                       <div id="video-title" >{{class.class_text}}</div>
                        <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6897563510457238029?autoplay=0&startTime=0">
+                           <iframe frameborder="0" allowfullscreen
+                               src="{{ class.class_url }}">
                            </iframe>
                            <ul style="display:flex;">
                                <li>已有869人学习</li>
@@ -40,74 +18,23 @@
                            </ul>
                        </div>
                    </div>
+                   {% endfor %}
+                  {% else %}
+                     <p> No class.</p>
+                  {% endif %}
 
-                   <div id="video-block">
-                       <div id="video-title">[二]为什么图像要用矩阵表示</div>
-                       <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6898664279398941195?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
-
-                   <div id="video-block">
-                       <div id="video-title">[三]图像处理就是矩阵处理</div>
-                       <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6897779240004616712?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
-
-                   <div id="video-block">
-                       <div id="video-title">[四]从文件中读取图像矩阵</div>
-                       <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6898321919506907656?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
-
-                   <div id="video-block">
-                       <div id="video-title">[五]从摄像头中读取图像矩阵</div>
-                       <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6898321689281561102?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
 
                    <div class="clear"></div>
                </div>
                <ul style="display:flex;">
-               <li>赞同</li>
-               <li>不赞同</li>
-               <li>分享</li>
-               <li>收藏</li>
+                   <li>赞同</li>
+                   <li>不赞同</li>
+                   <li>分享</li>
+                   <li>收藏</li>
                </ul>
            </div>
            <div id="content-block">
-               <div id="content-block-title"><p>会员免费学<p></div>
+               <div id="content-block-title"><p>限时秒杀<p></div>
                <div style="">
                    <div  id="video-block" >
                        <div id="video-title">CVPR2020:保证分类器的置信度和IOU双高</div>
@@ -145,7 +72,7 @@
                </ul>
            </div>
            <div id="content-block">
-               <div id="content-block-title"><p>会员专属折扣区<p></div>
+               <div id="content-block-title"><p>明明老师个性化推荐课程<p></div>
                <div style="">
                    <div  id="video-block" >
                        <div id="video-title">图形化展示卷机过程</div>
@@ -200,7 +127,7 @@
                </ul>
            </div>
            <div id="content-block">
-               <div id="content-block-title"><p>新课尝鲜<p></div>
+               <div id="content-block-title"><p>免费好课<p></div>
                <div style="">
                    <div  id="video-block" >
                        <div id="video-title">[一]课程导论</div>
@@ -279,4 +206,4 @@
                <li>收藏</li>
                </ul>
            </div>
-{% endblock content %}
+           {% endblock content %}
