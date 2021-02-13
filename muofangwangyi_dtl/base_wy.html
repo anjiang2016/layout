@@ -29,6 +29,9 @@
     body{
         background:rgb(246,246,246);
     }
+    #class_table.hovertable tr{
+        background-color:#d4e3e5;
+    }
     #nav{
         min-width:1000px;
     }
@@ -46,20 +49,89 @@
        flex-direction:row;
     }
 }
+
 .clear{
     clear:both;
     display:table;
+}
+a:link{color:rgb(22,22,22);}
+a:visited{color:rgb(0,22,22);}
+a:hover{color:rgb(255,255,255);}
+a:active{color:rgb(0,22,170);}
+a{
+    text-decoration:none;
+    display:block;
+}
+input{
+    margin:0 auto;
+    width:32%;
+    height:44px;
+}
+#button{
+    background: rgb(0,62,255) linear-gradient(hsla(0,0%,100%,.2), transparent);
+    color:rgb(255,255,255);
+    padding:.3em .8em;
+    border:1px solid rgba(0,0,0,.1);
+    border-radius: .5em;
+    box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+    text-shadow: 0 -.05em .05em .05em rgba(0,0,0,.5);
+    font-size:125%;
+    line-height:1.5;
+}
+#button:hover{
+    font-size:135%;
+    border-radius: .2em;
+}
+
+#ask_button{
+    border:1px solid rgb(0,102,255);
+    height:34px;-webkit-appearance:none;
+    background:rgb(0,102,255);
+    cursor:pointer;
+    border-radius:999px;
+    color:rgb(255,255,255);
+}
+#ask_button:hover{
+    border:1px solid rgb(130,102,255);
+    border-radius:10px;
+}
+
+form{
+    display:flex;
+}
+html{
+    -webkit-text-size-adjust:100%;
+}
+table{
+width:100%;
+border-collapse: collapse;
+text-indent: initial;
+}
+td, th{
+border-bottom: 1px solid #eee;
+line-height:40px;
+vertical-align:top;
+font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+}
+td:hover,th:hover{
+    background-color:rgb(0,102,255);
+    border-radius:3px;
 }
 li
 {
 display:block;
 padding:0px 15px;
 list-style:none outside none;
+line-height:64px;
+}
+li:hover{
+background-color:rgb(0,102,255);
+border-radius:3px;
 }
 ul
 {
 margin:0px;
-padding:16px;
+padding:0px 16px;
 }
 p
 {
@@ -117,7 +189,7 @@ border-right:5px solid rgb(0,102,255);
         <div id ="nav-main" style="margin:0px auto;padding:0px 30px 0px 16px;">
             <div style="display:flex">
               <ul style="display:flex;flex:0 0 auto;border:0px solid red;">
-                <li><a href="{% url 'cvclass:muofangwangyi' %}">老师明明可以靠颜值</a></li>
+                <li><a href="{% url 'cvclass:muofangwangyi' %}">每天十分钟入门很轻松</a></li>
                 <li><a href="{% url 'cvclass:muofangwangyi_fuli' %}">限时福利</a></li>
                 <li><a href="{% url 'cvclass:muofangwangyi_vip' %}"> 会员中心</a></li>
                 <li><a href="{% url 'cvclass:muofangwangyi_learn' %}">我的学习</a></li>
@@ -128,7 +200,8 @@ border-right:5px solid rgb(0,102,255);
                 <li><a href="{% url 'cvclass:muofangwangyi_logout' %}">退出</a></li>
               </ul>
               <div style="flex:1 1 0%;padding:12px;">
-                  <button type="button" style="border:1px solid rgb(0,102,255);height:34px;-webkit-appearance:none;background:rgb(0,102,255);cursor:pointer;border-radius:999px;color:rgb(255,255,255);">提问</button>
+                  <!--<button type="button" id="ask_button" style="border:1px solid rgb(0,102,255);height:34px;-webkit-appearance:none;background:rgb(0,102,255);cursor:pointer;border-radius:999px;color:rgb(255,255,255);">提问</button>-->
+                  <a href="{% url 'cvclass:muofangwangyi_question' %}"><button type="button" id="ask_button">问题反馈</button></a>
               </div>
               <div style="felx:0 0 auto;padding:16px;">
                   <div class="AppHeader-profile">

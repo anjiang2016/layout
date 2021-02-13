@@ -1,117 +1,31 @@
 {% extends "cvclass/lay_out/muofangwangyi_dtl/base_wy.html" %}
+{% load static %}
 {% block content %}
 
-
            <div id="content-block">
-               <div id="content-block-title"><p>限时福利</p></div>
-           </div>
-           <div id="content-block">
-                 <ul style="display:flex;">
-                     <li>49元[购买yolo公开课]</li>
-                 </ul>
-           </div>
-           <div id="content-block">
-               <div id="content-block-title"><p>福利详细</p></div>
+               <div id="content-block-title"><p>限时福利-特价公开课</p></div>
+               <div style="">
+                   <div  id="img-block" style="display:flex;padding:0px auto;justify-content:center;" >
+                        <div style="border:1px solid rgb(0,102,244);border-right:0px;border-radius:1px 1px 1px 1px;justify-content:center;flex-direction:column;">
+                                <a href="{% url 'cvclass:muofangwangyi_login' %}"><img style="padding:0 auto;flex:1;" height="320px" src="{% static 'cvclass/images/yolo_img.png'%}"></img></a>
+                        </div> 
+                        <div style="border:1px solid rgb(0,102,244);border-left:0px;border-radius:1px 1px 1px 1px;">
+                             <ul>
+                                <li>YOLO公开课</li>
+                                <li><a href="{% url 'cvclass:muofangwangyi_learn' %}">49元购买yolo公开课</a></li>
+                                <li>更新进度[%100]</li>
+                                <li>已有869人学习</li>
+                                <li>收藏 点赞 提建议</li> 
+                             </ul>
+                        </div> 
+                   </div>
+                   <div class="clear"></div>
+               </div>
            </div>
           
            <div id="content-block">
-               <div id="content-block-title"><p>会员精选推荐<p></div>
-               <div style="">
-                   <div  id="video-block" >
-                       <div id="video-title">[一]课程导论</div>
-                       <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6897563510457238029?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
-
-                   <div id="video-block">
-                       <div id="video-title">[二]为什么图像要用矩阵表示</div>
-                       <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6898664279398941195?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
-
-                   <div id="video-block">
-                       <div id="video-title">[三]图像处理就是矩阵处理</div>
-                       <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6897779240004616712?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
-
-                   <div id="video-block">
-                       <div id="video-title">[四]从文件中读取图像矩阵</div>
-                       <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6898321919506907656?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
-
-                   <div id="video-block">
-                       <div id="video-title">[五]从摄像头中读取图像矩阵</div>
-                       <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6898321689281561102?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
-
-                   <div class="clear"></div>
-               </div>
-               <ul style="display:flex;">
-               <li>赞同</li>
-               <li>不赞同</li>
-               <li>分享</li>
-               <li>收藏</li>
-               </ul>
-           </div>
-           <div id="content-block">
                <div id="content-block-title"><p>会员免费学<p></div>
                <div style="">
-                   <div  id="video-block" >
-                       <div id="video-title">CVPR2020:保证分类器的置信度和IOU双高</div>
-                       <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://classvideo-1257340069.cos.ap-guangzhou.myqcloud.com/cvpr2020%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/CVPR2020%3A%E4%BF%9D%E8%AF%81%E8%BE%93%E5%87%BA%E6%A1%86%E5%88%86%E7%B1%BB%E7%BD%AE%E4%BF%A1%E5%BA%A6%E5%92%8C%E4%BD%8D%E7%BD%AEIOU%E9%83%BD%E6%98%AF%E6%9C%80%E9%AB%98.mp4?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
                    <div  id="video-block" >
                        <div id="video-title" style="">CVPR2020:样本极度不均衡用softmax</div>
                        <div id="video-content">
@@ -151,36 +65,6 @@
                        </div>
                    </div>
                </div>
-               <div style="">
-                   <div  id="video-block" >
-                       <div id="video-title">图与神经网络-随机图的度分布</div>
-                       <div id="video-content">
-                           <iframe  frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6901672267244110339?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
-               </div>
-               <div style="">
-                   <div  id="video-block" >
-                       <div id="video-title">网络network和图graph到底时啥关系?</div>
-                       <div id="video-content">
-                           <iframe  frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6897420729202147854?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
-               </div>
                <div class="clear"></div>
                <ul style="display:flex;">
                <li>赞同</li>
@@ -197,61 +81,6 @@
                        <div id="video-content">
                            <iframe width="200" height="160" frameborder="0" allowfullscreen
                                src="https://www.ixigua.com/iframe/6897563510457238029?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
-                   <div id="video-block">
-                       <div id="video-title">[二]为什么图像要用矩阵表示</div>
-                       <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6898664279398941195?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
-
-                   <div id="video-block">
-                       <div id="video-title">[三]图像处理就是矩阵处理</div>
-                       <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6897779240004616712?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
-
-                   <div id="video-block">
-                       <div id="video-title">[四]从文件中读取图像矩阵</div>
-                       <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6898321919506907656?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
-                       </div>
-                   </div>
-
-                   <div id="video-block">
-                       <div id="video-title">[五]从摄像头中读取图像矩阵</div>
-                       <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6898321689281561102?autoplay=0&startTime=0">
                            </iframe>
                            <ul style="display:flex;">
                                <li>已有869人学习</li>

@@ -24,8 +24,9 @@
                  <ul >
                      <li>入门计算机视觉有新更新了</li>
                      <li>课程已经参与过半了</li>
-                     <li></li>
-                     <li></li>
+                     {% for message in message_list %}
+                        <li>{{ message }}</li>
+                     {% endfor %}
                  </ul>
            </div>
 

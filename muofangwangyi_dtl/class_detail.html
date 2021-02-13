@@ -1,20 +1,21 @@
 {% extends "cvclass/lay_out/muofangwangyi_dtl/base_wy.html" %}
 {% block content %}
            <div id="content-block">
-               <div id="content-block-title"><p>系统化学习计算机视觉<p></div>
+               <div id="content-block-title"><p>系统化学习计算机视觉-入门计算机视觉系列课程<p></div>
                <div style="">
                 {% if class_list %}
-                  {% for class in class_list %}
+                  {% for classdict in class_list %}
                    <div  id="video-block" >
-                       <div id="video-title" >{{class.class_text}}</div>
+                       <div id="video-title" >{{classdict.class.class_text}}{{classdict.class.id}}</div>
                        <div id="video-content">
                            <iframe frameborder="0" allowfullscreen
-                               src="{{ class.class_url }}">
+                               src="{{ classdict.class.class_url }}">
                            </iframe>
                            <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
+                               <li>已有{{classdict.bfs}}人次学习</li>
+                               <li><a href="{% url 'cvclass:wangyi_dianzan' classdict.class.id classtype 'fenxiang' %}">分享[{{classdict.fxs}}]</a></li>
+                               <li><a href="{% url 'cvclass:wangyi_dianzan' classdict.class.id classtype 'shoucang' %}">收藏[{{classdict.scs}}]</a></li>
+                               <li><a href="{% url 'cvclass:wangyi_dianzan' classdict.class.id classtype 'dianzan' %}">点赞[{{classdict.dzs}}]</a></li>
                            </ul>
                        </div>
                    </div>

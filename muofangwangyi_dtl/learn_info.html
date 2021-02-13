@@ -1,7 +1,12 @@
 {% extends "cvclass/lay_out/muofangwangyi_dtl/base_wy.html" %}
+{% load static %}
 {% block content %}
            <div id="content-block">
-               <div id="content-block-title"><p>{{ request.user.username }}同学来了，下午好</p></div>
+               {% if not request.user.is_authenticated %}
+                   <div id="content-block-title"><p>{{msg}}</p></div>
+               {% else %}
+                   <div id="content-block-title"><p>{{msg}}</p></div>
+               {% endif %}
            </div>
            <div id="content-block">
                  <ul style="display:flex;">
@@ -20,11 +25,37 @@
                  </ul>
            </div>
            <div id="content-block">
+                <table id="class_table" > 
                 <ul>
-                    <li>入门基本图像处理   过期时间  学习进度</li>
-                    <li>入门计算机视觉     过期时间  学习进度</li>
-                    <li>计算机视觉提升课程 过期时间  学习进度</li>
-                    <li>机器学习课程       过期时间  学习进度</li>
+                {% for model in models %}
+                    <tr>
+                        {% if model.admin_url %}
+                            <th><a href="{{ model.admin_url }}">{{model.name}}</a></th>
+                        {% elif model.buy_url %}
+                            <th><a href="{{ model.buy_url }}">{{model.name}}</a></th>
+                        {% else %}
+                            <th>{{ model.name }}</th> 
+                        {% endif %}
+                        <td>课程介绍</td>
+                        <td>过期时间</td>
+                        <td>学习进度</td>
+                        {% if model.add_url %}
+                            <td><a href={{ model.add_url }}>添加</a></td>
+                        {% else %}
+                            <td>&nbsp;</td>
+                        {% endif %}
+      
+                        {% if model.admin_url %}
+                                <td><a href="{{ model.admin_url }}" style="background:url({% static 'cvclass/images/view_video.jpg'  %}) 0 11px no-repeat;">&nbsp&nbsp&nbsp&nbsp进入学习</a></td>
+                        {% elif model.buy_url %}
+                            <td><a href="{{ model.buy_url }}" style="background:url({% static 'cvclass/images/buy.jpg' %}) 0 11px no-repeat;" >&nbsp&nbsp&nbsp&nbsp点击购买</a></td>
+                        {% else %}
+                            <td>&nbsp</td>
+                        {% endif %}
+
+                    </tr>
+                {% endfor %}
                 </ul>
+                </table>
            </div>
 {% endblock content %}
