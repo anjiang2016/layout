@@ -1,0 +1,46 @@
+{% extends "cvclass/lay_out/muofangwangyi_dtl/base_wy.html" %}
+{% block content %}
+           <div id="content-block">
+               <div id="content-block-title"><p>系统化学习计算机视觉-入门计算机视觉系列课程<p></div>
+
+               <div style="">
+                {% if class_list %}
+                   <div  id="video-block" >
+                     <div id="video-title" >{{classdict.class.class_text}}{{classdict.class.id}}</div>
+                     <div style="border-right:5px solid rgb(0,102,255);border-left:5px solid rgb(0,102,255);border-radius:0px 0px 0px 0px;text-align:center;">
+                               {{current_class.class.class_text}}
+                     </div>
+                     <div id="video-content" style="display:flex;">
+                           <div id="video-detail">
+                               <iframe id="detail-iframe"  frameborder="0" allowfullscreen
+                                   src="{{ current_class.class.class_url}}">
+                               </iframe>
+                           </div>
+                           <div id="video-text-list" style="height:400px;width:159px;overflow:auto;">
+
+                           {% for classdict in class_list %}
+                               <ul style="padding-left:0px;border-top:1px solid rgb(200,200,200);display:flex;font-size:5px;overflow:auto;">
+                                   <a href="{% url 'cvclass:wangyi_detail' classdict.class.id classtype %}"><li style="padding-left:5px;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow:hidden;line-height:35px;">
+                                        [{{classdict.index}}]{{classdict.class.class_text}}</li>
+                                   </a>
+                               </ul>
+                          {% endfor %}
+
+                           </div>
+                     </div>
+
+                   </div>
+                 {% else %}
+                   <p> No class.</p>
+                 {% endif %}
+               </div>
+
+               <div class="clear"></div>
+                   <ul style="display:flex;">
+                       <li>已有{{current_class.bfs}}人次学习</li>
+                       <li><a href="{% url 'cvclass:wangyi_dianzan' current_class.class.id classtype 'fenxiang' %}">分享[{{current_class.fxs}}]</a></li>
+                       <li><a href="{% url 'cvclass:wangyi_dianzan' current_class.class.id classtype 'shoucang' %}">收藏[{{current_class.scs}}]</a></li>
+                       <li><a href="{% url 'cvclass:wangyi_dianzan' current_class.class.id classtype 'dianzan' %}">点赞[{{current_class.dzs}}]</a></li>
+                   </ul>
+           </div>
+           {% endblock content %}

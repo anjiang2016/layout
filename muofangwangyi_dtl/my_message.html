@@ -20,12 +20,9 @@
                  </ul>
            </div>
            <div id ="content-block">
-               <div>课程提醒内容</div>
-                 <ul >
-                     <li>入门计算机视觉有新更新了</li>
-                     <li>课程已经参与过半了</li>
+                 <ul>
                      {% for message in message_list %}
-                        <li>{{ message }}</li>
+                        <li style="border-top:1px solid rgb(202,202,202);line-height:30px;">{{ message }}</li>
                      {% endfor %}
                  </ul>
            </div>

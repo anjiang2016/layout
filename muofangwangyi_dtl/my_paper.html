@@ -1,0 +1,28 @@
+{% extends "cvclass/lay_out/muofangwangyi_dtl/base_wy.html" %}
+{% block content %}
+
+           <div id="content-block">
+               <div id"content-block-title"><p class="title">文章列表</p></div>
+           </div>
+           <div id="content-block">
+                 <ul style="display:flex;">
+                     <li>推荐</li>
+                     <li>关注</li>
+                     <li>热榜</li>
+                 </ul>
+           </div>
+           <div id ="content-block">
+                 <table>
+                     {% for paper in paper_list %}
+                        <tr >
+                        <td> {{paper.id}}</td>
+                        <td style="border-top:1px solid rgb(202,202,202);line-height:30px;"><a href="{% url 'cvclass:wangyi_showpaper' paper.id %}">{{ paper.paper_title }}</a></td>
+                        <td>{{paper.create_date}}</td>
+  
+                        <td> <a href="{% url 'cvclass:wangyi_delpaper' paper.id %}">删除</a><td>
+                        </tr>
+                     {% endfor %}
+                 <table>
+           </div>
+
+{% endblock content %}

@@ -1,0 +1,55 @@
+{% extends "cvclass/lay_out/muofangwangyi_dtl/base_wy.html" %}
+{% load static %}
+{% block content %}
+        {% if request.user.is_authenticated %}
+           <div id="content-block">
+               <div id="content-block-title"><p>个人信息</p></div>
+           </div>
+           <div id="content-block">
+              <table>
+                  <tr>
+                      <th>昵称</th>
+                      <td>{{request.user.username}}</td>
+                  </tr>
+                  <tr>
+                      <th>头像</th>
+                      <td>
+                      <img style="padding:0 auto;flex:1;" height="200px" src="{% static 'cvclass/images/' %}{{request.user.id}}.jpg"></img>
+                        本图片由gan模型自动生成
+                       </td>
+                  </tr>
+                  <tr>
+                      <th>ID</th>
+                      <td>{{request.user.id}}</td>
+                  </tr>
+                  <tr>
+                      <th>座右铭</th>
+                      <td>跬步以致千里</td>
+                  </tr>
+                  <tr>
+                      <th>已购买课程</th>
+                      <td>
+                      <table>
+                      {% for model in models %}
+                              {% if model.admin_url %}
+                                  <tr>
+                                      <th><a href="{{ model.admin_url }}">{{model.name}}</a></th>
+                                      <td><a href="{% url 'cvclass:wangyi_courseintro' %}">课程介绍</a></td>
+                                      <td style="background:url({% static 'cvclass/images/view_video.jpg' %}) 0 11px no-repeat;"> <a href="{{ model.admin_url }}" >&nbsp;&nbsp;&nbsp;&nbsp;进入学习</a></td>
+                                  </tr>
+                              {% endif %}
+                      {% endfor %}
+                      </table>
+
+                      </td>
+                  </tr>
+                  <tr>
+                      <th>余额</th>
+                      <td>0.0元</td>
+                      <a href=""><td>充值</td></a>
+                  </tr>
+               
+              </table>       
+           </div>
+         {% endif %}
+{% endblock content %}

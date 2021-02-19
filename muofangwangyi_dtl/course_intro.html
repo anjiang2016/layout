@@ -1,0 +1,12 @@
+{% extends "cvclass/lay_out/muofangwangyi_dtl/base_wy.html" %}
+{% load static %}
+{% block content %}
+           <div id="content-block">
+               {% for paper in pol %}
+               <div id="content-block-title"><p>{{ paper.paper_title}}</p></div>
+               <div id="paper">
+                    {{ paper.paper_content | safe}}
+               </div>
+               {% endfor %}
+           </div>
+{% endblock content %}

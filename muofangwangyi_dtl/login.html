@@ -21,7 +21,7 @@
                <div id="content-block-title"><p>{{ request.user.username }}同学来了，下午好</p></div>
            </div>
            <div id="content-block">
-                 <ul style="display:flex;">
+                 <ul class="nav" style="display:flex;">
                      <li>按加入时间</li>
                      <li>按加入顺序</li>
                      <li>全部</li>
@@ -33,7 +33,7 @@
          {% endif %}
            <div id="content-block">
                 <table>
-                <ul>
+                <ul class="notnav">
                 {% for model in models %}
                     <tr>
                         {% if model.admin_url %}

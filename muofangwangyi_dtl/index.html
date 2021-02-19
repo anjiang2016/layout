@@ -1,101 +1,26 @@
 {% extends "cvclass/lay_out/muofangwangyi_dtl/base_wy.html" %}
 {% load static %}
 {% block content %}
-           <div id="content-block">
-               <div id="content-block-title"><p>介绍<p></div>
-               <div style="">
-                   <div  id="video-block" >
-                       <div id="video-title">入门计算机视觉系列课程介绍</div>
-                       <div id="video-content">
-                           <iframe width="200" height="160" frameborder="0" allowfullscreen
-                               src="https://www.ixigua.com/iframe/6897563510457238029?autoplay=0&startTime=0">
-                           </iframe>
-                           <ul style="display:flex;">
-                               <li>已有869人学习</li>
-                               <li>分享</li>
-                               <li>收藏</li>
-                           </ul>
+
+           {% for class_intro in class_intro_list %}
+               <div id="content-block">
+                   <div id="content-block-title"><p>{{class_intro.title}}</p></div>
+                   <div style="">
+                       <div  id="img-block" style="background:url(/static/cvclass/images/{{class_intro.image_name}});" >
+                            <div id="img-block-text">
+                                 <ul class="nav">
+                                    <li id="img-block-li"><a href="{% url 'cvclass:muofangwangyi_learn' %}">{{class_intro.class_name}}</a></li>
+                                    <li id="img-block-li"><a href="{% url 'cvclass:muofangwangyi_learn' %}">{{class_intro.type}}</a></li>
+                                    <li id="img-block-li">更新进度[{{class_intro.refresh_percent}}]</li>
+                                    <li id="img-block-li">已有{{class_intro.view_num}}人学习</li>
+                                    <li id="img-block-li">收藏({{class_intro.scn}}) 点赞({{class_intro.dzn}}) <a href="{% url 'cvclass:muofangwangyi_question' %}">提建议</a></li> 
+                                 </ul>
+                            </div> 
                        </div>
+                       <div class="clear"></div>
                    </div>
                </div>
-               <div class="clear"></div>
-           </div>
-
-           <div id="content-block">
-               <div id="content-block-title"><p>免费好课</p></div>
-               <div style="">
-                   <div  id="img-block" style="display:flex;padding:0px auto;justify-content:center;" >
-                        <div style="border:1px solid rgb(0,102,244);border-right:0px;border-radius:1px 1px 1px 1px;justify-content:center;flex-direction:column;">
-                                <a href="{% url 'cvclass:muofangwangyi_login' %}"><img style="padding:0 auto;flex:1;" height="320px" src="{% static 'cvclass/images/rmjsjsj.png'%}"></img></a>
-                        </div> 
-                        <div style="border:1px solid rgb(0,102,244);border-left:0px;border-radius:1px 1px 1px 1px;">
-                             <ul>
-                                <li><a href="{% url 'cvclass:muofangwangyi_learn' %}">入门计算机视觉系列课程</a></li>
-                                <li><a href="{% url 'cvclass:muofangwangyi_learn' %}">限时免费</a></li>
-                                <li>更新进度[%40]</li>
-                                <li>已有869人学习</li>
-                                <li>收藏 点赞 提建议</li> 
-                             </ul>
-                        </div> 
-                   </div>
-                   <div class="clear"></div>
-               </div>
-
-               <div id="content-block-title"><p>特价公开课</p></div>
-               <div style="">
-                   <div  id="img-block" style="display:flex;padding:0px auto;justify-content:center;" >
-                        <div style="border:1px solid rgb(0,102,244);border-right:0px;border-radius:1px 1px 1px 1px;justify-content:center;flex-direction:column;">
-                                <a href="{% url 'cvclass:muofangwangyi_login' %}"><img style="padding:0 auto;flex:1;" height="320px" src="{% static 'cvclass/images/yolo_img.png'%}"></img></a>
-                        </div> 
-                        <div style="border:1px solid rgb(0,102,244);border-left:0px;border-radius:1px 1px 1px 1px;">
-                             <ul>
-                                <li><a href="{% url 'cvclass:muofangwangyi_learn' %}">YOLO系列全家桶课程</a></li>
-                                <li><a href="{% url 'cvclass:muofangwangyi_learn' %}">限时特价</a></li>
-                                <li>更新进度[%100]</li>
-                                <li>已有869人学习</li>
-                                <li>收藏 点赞 提建议</li> 
-                             </ul>
-                        </div> 
-                   </div>
-                   <div class="clear"></div>
-               </div>
-               <div id="content-block-title"><p>限时秒杀</p></div>
-               <div style="">
-                   <div  id="img-block" style="display:flex;padding:0px auto;justify-content:center;" >
-                        <div style="border:1px solid rgb(0,102,244);border-right:0px;border-radius:1px 1px 1px 1px;justify-content:center;flex-direction:column;">
-                                <a href="{% url 'cvclass:muofangwangyi_login' %}"><img style="padding:0 auto;flex:1;" height="320px" src="{% static 'cvclass/images/rcnn_img.jpg'%}"></img></a>
-                        </div> 
-                        <div style="border:1px solid rgb(0,102,244);border-left:0px;border-radius:1px 1px 1px 1px;">
-                             <ul>
-                                <li><a href="{% url 'cvclass:muofangwangyi_learn' %}">RCNN系列全家桶课程</a></li>
-                                <li><a href="{% url 'cvclass:muofangwangyi_learn' %}">超值课程 了解目标检测核</a></li>
-                                <li>更新进度[%100]</li>
-                                <li>已有869人学习</li>
-                                <li>收藏 点赞 提建议</li> 
-                             </ul>
-                        </div> 
-                   </div>
-                   <div class="clear"></div>
-               </div>
-
-               <div id="content-block-title"><p>明明老师推荐课程</p></div>
-               <div style="">
-                   <div  id="img-block" style="display:flex;padding:0px auto;justify-content:center;" >
-                        <div style="border:1px solid rgb(0,102,244);border-right:0px;border-radius:1px 1px 1px 1px;justify-content:center;flex-direction:column;">
-                                <a href="{% url 'cvclass:muofangwangyi_login' %}"><img style="padding:0 auto;flex:1;" height="320px" src="{% static 'cvclass/images/rcnn_img.jpg'%}"></img></a>
-                        </div> 
-                        <div style="border:1px solid rgb(0,102,244);border-left:0px;border-radius:1px 1px 1px 1px;">
-                             <ul>
-                                <li><a href="{% url 'cvclass:muofangwangyi_learn' %}">RCNN系列全家桶课程</a></li>
-                                <li><a href="{% url 'cvclass:muofangwangyi_learn' %}">超值课程 了解目标检测核心</a></li>
-                                <li>更新进度[%100]</li>
-                                <li>已有869人学习</li>
-                                <li>收藏 点赞 提建议</li> 
-                             </ul>
-                        </div> 
-                   </div>
-                   <div class="clear"></div>
-           </div>
-
+           {% endfor %}
+     
 
            {% endblock content %}
